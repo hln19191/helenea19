@@ -54,7 +54,7 @@ public:
     }
 };
 
-void addProduct(vector<Product*> container) {
+void addProduct(vector<Product*>& container) {
     int type;
     string code, name, color;
 
@@ -97,7 +97,7 @@ void addProduct(vector<Product*> container) {
     }
 }
 
-void editProduct(vector<Product*> container) {
+void editProduct(vector<Product*>& container) {
     string code;
     cout << "Masukkan kode produk yang ingin diedit: ";
     cin >> code;
@@ -178,7 +178,7 @@ int main() {
         cout << "4. Display Product By ID" << endl;
         cout << "5. Delete All Product" << endl;
         cout << "6. Delete Product By ID" << endl;
-        cout << "0. Exut Program" << endl;
+        cout << "0. Exit Program" << endl;
 
         cout << "Input Pilihan: "; cin >> choice;
 
@@ -220,3 +220,5 @@ int main() {
 
     return 0;
 }
+
+ 
