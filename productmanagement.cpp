@@ -67,7 +67,7 @@ void addProduct(vector<Product*>& container) {
     cout << "Masukkan kode produk: ";
     cin >> code;
 
-    // Periksa apakah kode produk sudah ada
+    // Untuk memeriksa apakah kode produk sudah ada
     for ( auto& product : container) {
         if (product->getCode() == code) {
             cout << "Kode produk sudah ada! Masukkan kode produk yang berbeda." << endl;
@@ -109,7 +109,7 @@ void editProduct(vector<Product*>& container) {
             cout << "Masukkan warna produk baru: ";
             cin >> color;
 
-            product->print(); // Display current product details
+            product->print(); 
             if (auto botol = dynamic_cast<Botol_Minum*>(product)) {
                 float volume;
                 cout << "Volume baru (L): ";
@@ -211,7 +211,7 @@ int main() {
         }
         case 0:
             isRunning = false;
-            deleteAllProducts(container); // Clean up before exiting
+            deleteAllProducts(container); 
             break;
         default:
             cout << "Pilihan tidak valid." << endl;
